@@ -106,7 +106,10 @@ module.exports = function(grunt) {
         var total, completed;
 
         var tick = function() {
-            if (completed++ === total) {
+            // increase completed counter
+            completed++;
+            // determine if there are more tasks
+            if (completed === total) {
                 done();
             }
         };
